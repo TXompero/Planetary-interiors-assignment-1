@@ -18,11 +18,6 @@ core.set_material(core_material)
 core.set_temperature_mode('adiabatic',
                           temperature_top = 2000)
 
-core.set_pressure_mode(pressure_mode = 'self-consistent',
-                       pressure_top = 11.65e9,
-                       gravity_bottom = 0.1)
-
-core.make()
 
 mantle_material = minerals.SLB_2024.olivine([0.333,0.667])
 mantle = Layer('mantle',radii = np.linspace(R_planet*alpha,R_planet*beta,100))
